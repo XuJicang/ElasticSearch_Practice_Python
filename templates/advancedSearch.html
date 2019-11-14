@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Interior-Design-Responsive-Website-Templates-Edge">
+	<meta name="author" content="">
+	<title>Home</title>
+    	<link rel="favicon" href="../assets/images/favicon.png">
+	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="../assets/css/style.css">
+    <link rel='stylesheet' id='camera-css'  href='../assets/css/camera.css' type='text/css' media='all'>
+	<script src="../assets/js/html5shiv.js"></script>
+	<script src="../assets/js/respond.min.js"></script>
+
+    <style>
+     mark{
+            background-color: rgba(121, 71, 209, 0.58);
+        }
+     .popover {
+        width:auto;
+        max-width:800px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+	<!-- Fixed navbar -->
+	<div id="header-top">       
+		<!--  HEADER TOP -->
+        <div class="container">
+        	<div class="row">
+				<div class="col-md-6"> 
+                    
+                        <div class="text">
+                            
+							<p>Toll Free : (002) 124 2548</p>
+                            
+                        </div>      
+                </div><!-- end -->
+            	<div class="col-md-6">              	
+                   <div class="social text-center pull-right">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div>
+                    
+                </div><!-- end -->
+            </div><!-- end .row -->
+           </div> 
+		</div>
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<img src="../assets/images/logo.png" alt="Techro HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="./Result.html">fullSearch</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+					<div class="fluid_container">
+                    <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                        <div data-thumb="../assets/images/slides/thumbs/img1.jpg" data-src="../assets/images/slides/img3.jpg">
+                        </div> 
+                        <div data-thumb="../assets/images/slides/thumbs/img2.jpg" data-src="../assets/images/slides/img2.jpg">
+                        </div>
+                        <div data-thumb="../assets/images/slides/thumbs/img3.jpg" data-src="../assets/images/slides/img1.jpg">
+                        </div> 
+                    </div><!-- #camera_wrap_3 -->
+                </div><!-- .fluid_container -->
+		</div>
+	</header>
+	<!-- /Header -->
+
+  <div class="head-box" style="margin-top:-20px;">
+            	<div class="container">
+				<div class="row">
+                	<div class="col-sm-12">
+                    	
+                        <h2 class="text-center text-uppercase last">ElasticSearch高级搜索</h2>
+                        
+                        <p class="text-center last">稳定、快速、免费实验性搜索服务共收录了 10余条 豆瓣书籍数据</p>
+          
+<div class="search-panel">
+                <form class="form-inline" role="form">
+                    <div class="col-md-1 form-inline">
+                        <button class="btn btn-default form-group" type="button" ng-disabled="info.length >= 6" ng-click="add()">+</button>
+                        <button class="btn btn-default form-group" type="button" ng-click="delete()" ng-disabled="info.length==1">-</button>
+                    </div>
+                    <div class="col-md-10">
+                    <div  ng-repeat="item in info track by $index">
+                        <div class="form-group hidden-xs adv">
+                             <select  class="form-control" id="Calculate" placeholder="逻辑操作符" autocomplete="off" ng-model="$parent.Cal[$index]">
+                                 <option selected="selected">must</option>
+                                <option>must_not</option>
+                                <option>should</option>
+                             </select>
+                        </div>
+                        <div class="form-group">
+                             <select  class="form-control" id="city" placeholder="字段类型" autocomplete="off" ng-model="$parent.Field[$index]">
+                                <option selected="selected">title</option>
+                                <option>author</option>
+                                <option>publisher</option>
+                                 <option>ISBN</option>
+                                 <option>contentIntro</option>
+                                 <option>authorIntro</option>
+                             </select>
+                        </div>
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <input class="form-control price" type="text" placeholder="match查询词" ng-model="$parent.Input[$index]">
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-inline">
+                            <span style="font-size:14px;">
+                                    <div class="input-daterange input-group form-control" id="datepicker">
+                                        <span class="cy-pad-hor-s input-group-addon">出版时间</span>
+                                        <input type="text" class="form-control" name="start" id="qBeginTime" ng-model="time1" />
+                                        <span class="input-group-addon">至</span>
+                                        <input type="text" class="form-control" name="end" id="qEndTime" ng-model="time2"/>
+                                     </div>
+                            </span>
+                             <span style="font-size:14px;">
+                                        <div class="input-daterange input-group form-control">
+                                            <span class="cy-pad-hor-s input-group-addon">豆瓣评分</span>
+                                            <input type="text" class="form-control" name="start" ng-model="score1"/>
+                                            <span class="input-group-addon">至</span>
+                                            <input type="text" class="form-control" name="end" ng-model="score2" />
+                                         </div>
+                             </span>
+                             <span style="font-size:14px;">
+                                        <div class="input-daterange input-group form-control">
+                                            <span class="cy-pad-hor-s input-group-addon">发行价格</span>
+                                            <input type="text" class="form-control" name="start" ng-model="price1"/>
+                                            <span class="input-group-addon">至</span>
+                                            <input type="text" class="form-control" name="end" ng-model="price2" />
+                                         </div>
+                             </span>
+                            <span style="font-size:14px;">
+                                        <div class="input-daterange input-group form-control">
+                                            <span class="cy-pad-hor-s input-group-addon">页码范围</span>
+                                            <input type="text" class="form-control" name="start" ng-model="page1"/>
+                                            <span class="input-group-addon">至</span>
+                                            <input type="text" class="form-control" name="end" ng-model="page2" />
+                                         </div>
+                             </span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <a href="" class="btn btnsearch" ng-click="search()">Search</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+                    </div><!-- end .col-sm-12 -->
+                </div><!-- ene .row -->
+				</div>
+            </div>
+   	<section class="container" ng-show="show">
+        <div class="row">
+			<div class="section-heading">
+                <h2>查询结果</h2><span class="glyphicon glyphicon-list" data-toggle="collapse" data-target="#resultlist"></span>
+            </div>
+        </div>
+        <div id="resultlist" class="collapse in">
+            <div  class="list-group packages" id="common-packages" ng-repeat="item in res.hits.hits track by $index" >
+                <a class="package list-group-item" target="_blank" >
+            <div class="row">
+                <div class="col-md-2" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{{item._source.title2}}"><h4 class="package-name" ng-bind-html="item._source.title|trustHtml"></h4></div>
+                <div class="col-md-2"><h4 class="package-name"><span><span class="glyphicon glyphicon-star"></span> 检索得分：{{ item._score}}</span><br><span><spam class="glyphicon glyphicon-star-empty"></spam> 豆瓣得分：{{ item._source.doubanscore}}</span></h4></div>
+                <div class="col-md-8 hidden-xs" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{{item._source.contentIntro2}}"><p class="package-description" ng-bind-html="item._source.contentIntro|trustHtml"></p></div>
+                <div class="clearfix"></div>
+                <div class="package-extra-info col-md-2">{{ item._source.author}}</div>
+                <div class="package-extra-info col-md-2"><span><span class="glyphicon glyphicon-bookmark"></span> {{ item._source.publisher}}.{{ item._source.year}}出版.共{{ item._source.page}}页.零售价：{{ item._source.price}}.ISBN:{{ item._source.ISBN}}</span></div>
+                <div class="package-extra-info col-md-8" ng-bind-html="item._source.authorIntro|trustHtml" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{{item._source.authorIntro2}}"></div>
+            </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+	
+	<section class="container">
+			
+			<div class="row">
+			<div class="section-heading">
+							<h2>Our Team</h2>
+							<p>We are the best cooperated group including two phd student and one graduate student</p>
+						</div>
+				 
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="featured-box">
+						<i class="fa fa-eye fa-2x"></i>
+						<div class="text">
+							<h3>彭凡一</h3>
+							信息资源管理学院博士生，富有诗情画意，做事严谨认真，团队组长。
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-box">
+						<i class="fa fa-quote-right fa-2x"></i>
+						<div class="text">
+							<h3>李庆阳</h3>
+							信息资源管理学院博士生，虚心好学，是团队的老大哥，为人做事靠谱，学风扎实！
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-box">
+						<i class="fa fa-arrows fa-2x"></i>
+						<div class="text">
+							<h3>许济沧</h3>
+							信息资源管理学院硕士生，信息资源管理方向。喜欢音乐与健身。
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+         <section class="news-box top-margin">
+        <div class="container"> 
+            <div class="row">
+       <div class="section-heading">
+							<h2>Elasticsearch News</h2>
+							<p>Here we want to talk about some business news and successful cooperation experience</p>
+						</div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news2.jpg" alt=""></figure>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>Elastic与阿里云达成合作伙伴关系 提供 ” 阿里云 Elasticsearch ” 的新服务</strong></p>
+                                            <p> “ 阿里云 Elasticsearch ” 的新服务能让阿里巴巴的客户随心所欲地运用 Elasticsearch 强大的实时搜索、采集及数据分析功能，是一站式而且主导性的解决方案。 </p>
+                                        </div>
+                                        <div>
+                                            <a href="https://www.elastic.co/cn/blog/alibaba-cloud-to-offer-elasticsearch-kibana-and-x-pack-in-china" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news3.jpg" alt=""></figure>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>Elasticsearch的目标是让全文搜索变得简单</strong></p>
+                                            <p>百度也采用了相关技术</p>
+                                        </div>
+                                        <div>
+                                            <a href="http://baijiahao.baidu.com/s?id=1576091174205107&wfr=spider&for=pc" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news4.jpg" alt=""></figure>
+                            <div class="caption maxheight2">
+                           <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>暴雪娱乐</strong></p>
+                                            <p>你会看到一个快速了解暴雪的大数据管道，然后在详细了解如何掩护小组利用弹性叠层平台来保证游戏的不断运转在峰值性能。</p>
+                                        </div>
+                                        <div>
+                                            <a href="https://www.elastic.co/elasticon/conf/2018/sf/watching-overwatch-at-activision-blizzard" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+      <section class="news-box top-margin">
+        <div class="container"> 
+            <div class="row">
+       <div class="section-heading">
+							<h2>Useful Blogs</h2>
+							<p>Here I share some of the helpful articles with you to help you to start an elastic app</p>
+						</div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news5.png" alt=""></figure>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>es基本安装</strong></p>
+                                            <p>Install Elasticsearch with Windows MSI Installer</p>
+                                        </div>
+                                        <div>
+                                            <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.5/windows.html#msi-installer-command-line-configuration" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news6.png" alt=""></figure>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>Python操作es的API</strong></p>
+                                            <p>安装elasticsearch模块，通过它操作Elasticsearch</p>
+                                        </div>
+                                        <div>
+                                            <a href="https://www.cnblogs.com/shhnwangjian/p/7160902.html" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="../assets/images/news7.jpg" alt=""></figure>
+                            <div class="caption maxheight2">
+                           <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><strong>Flask与jinja2</strong></p>
+                                            <p>Flask是一个Python编写的Web 微框架，让我们可以使用Python语言快速实现一个网站或Web服务。本文参考自Flask官方文档，大部分代码引用自官方文档。</p>
+                                        </div>
+                                        <div>
+                                            <a href="https://blog.csdn.net/u011054333/article/details/70151857" class="btn-inline">more</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+		<div class="container">
+			<div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div>
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="about.html">About</a> |
+								<a href="services.html">Services</a> |
+								
+								<a href="projects.html">Projects</a> |
+								<a href="contact.html">Contact</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/modernizr-latest.js"></script>
+	<script type='text/javascript' src='../assets/js/jquery.min.js'></script>
+    <script src="../js/angular.js"></script>
+    <script type='text/javascript' src='../assets/js/fancybox/jquery.fancybox.pack.js'></script>
+    <script type='text/javascript' src='../assets/js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='../assets/js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='../assets/js/camera.min.js'></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/custom.js"></script>
+    <script src="../js/angular-sanitize.js"></script>
+    <script>
+   var app = angular.module('myApp', ['ngSanitize']);
+   app.controller('myController',
+         function ($scope,$http,$timeout) {
+            $scope.show=false;
+            $scope.Cal=[];
+            $scope.Field=[];
+            $scope.Input=[];
+            $scope.info = [0];
+            $scope.price1="";
+            $scope.price2="";
+            $scope.page1="";
+            $scope.page2="";
+            $scope.score1="";
+            $scope.score2="";
+            $scope.time1="";
+            $scope.time2="";
+            $scope.add = function() {
+                var timestamp = Date.parse(new Date());
+                timestamp = timestamp / 1000;
+                 $scope.info.push(timestamp);
+             };
+    // 删除
+            $scope.delete = function() {
+                 $scope.info.pop();
+            };
+        $scope.search=function(){
+        var num=$scope.info.length;
+        var i=0;
+        var must='';
+        var must_not='';
+        var should='';
+         $scope.data='{"query": { "bool": {';
+        for(i; i<num; i=i+1){
+            if($scope.Cal[i]=='must'){
+                if(must==''){must='"must": [{"match": {"'+$scope.Field[i]+'": "'+$scope.Input[i]+'"}}';}else{must=must+',{"match":{ "'+$scope.Field[i]+'": "'+$scope.Input[i]+'" }}';}
+            }else if($scope.Cal[i]=='must_not'){
+                if(must_not==''){must_not='"must_not": [{"match": {"'+$scope.Field[i]+'": "'+$scope.Input[i]+'"}}';}else{must_not=must_not+',{"match":{ "'+$scope.Field[i]+'": "'+$scope.Input[i]+'" }}';}
+            }else if($scope.Cal[i]=='should'){
+                if(should==''){should='"should": [{"match": {"'+$scope.Field[i]+'": "'+$scope.Input[i]+'"}}';}else{should=should+',{"match":{ "'+$scope.Field[i]+'": "'+$scope.Input[i]+'" }}';}
+            }
+        }
+        if(must!=''){
+            $scope.data=$scope.data+must+'],';
+        }
+        if(must_not!=''){
+            $scope.data=$scope.data+must_not+'],';
+        }
+        if(should!=''){
+            $scope.data=$scope.data+should+'],"minimum_should_match": 1,';
+        }
+        $scope.data=$scope.data+'"filter": [{"range": {"year": {"gte": "'+$scope.time1+'","lte": "'+$scope.time2+'"}}},{"range": {"price": {"gte": "'+$scope.price1+'","lte": "'+$scope.price2+'"}}},{"range": {"doubanscore": {"gte": "'+$scope.score1+'","lte": "'+$scope.score2+'"}}},{"range": {"page": {"gte": "'+$scope.page1+'","lte": "'+$scope.page2+'"}}}]}},"highlight" : {"pre_tags" : ["<mark>"],"post_tags" : ["</mark>"],"fields": {"authorIntro":  {},"title": {},"contentIntro":{}}}}';
+        $http({
+                method: 'POST',
+                url: 'http://127.0.0.1:5000/advancedSearch/',
+                data: $scope.data,
+                headers:{ 'Content-Type': 'application/json'}
+    }).then(function successCallback(response) {
+                    $scope.show=true;
+                    $scope.res=response.data;
+                }, function errorCallback(response) {
+                    alert('查询失败');
+                }).then(jQuery("[data-toggle='popover']").popover());
+            };
+         });
+   app.filter("trustHtml",function($sce){
+   return function (input){
+       return $sce.trustAsHtml(input);
+   }
+});
+
+	</script>
+    <script>
+		jQuery(function(){
+			jQuery('#camera_wrap_4').camera({
+				height: '600',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../assets/images/'
+			});
+		});
+
+</script>
+</body>
+</html>

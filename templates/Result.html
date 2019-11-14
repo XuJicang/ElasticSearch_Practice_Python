@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://www.bootcdn.cn/ -->
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Elsaticsearch</title>
+    <meta name="description"
+          content="es">
+    <meta name="keywords" content="">
+    <meta name="author" content="es">
+    <meta name="founder" content="许济沧">
+    <link href="https://cdn.bootcss.com" rel="dns-prefetch">
+    <link href="https://api.bootcdn.cn" rel="dns-prefetch">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/site.min.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--><!--[if IE 9]>
+    <script src="https://cdn.bootcss.com/geopattern/1.2.3/js/base64.min.js"></script>
+    <script src="https://cdn.bootcss.com/geopattern/1.2.3/js/typedarray.min.js"></script>
+    <![endif]-->
+    <style type="text/css">/*
+        * contextMenu.js v 1.4.0
+        * Author: Sudhanshu Yadav
+        * s-yadav.github.com
+        * Copyright (c) 2013 Sudhanshu Yadav.
+        * Dual licensed under the MIT and GPL licenses
+        **/
+        mark{
+            background-color: rgba(121, 71, 209, 0.58);
+        }
+        .iw-contextMenu {
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+        border: 1px solid #c8c7cc;
+        border-radius: 11px;
+        display: none;
+        z-index: 1000000132;
+        max-width: 300px;
+        }
+
+        .iw-cm-menu {
+        background: #fff;
+        color: #000;
+        margin: 0px;
+        padding: 0px;
+        }
+
+        .iw-curMenu {
+        }
+
+        .iw-cm-menu li {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+        list-style: none;
+        padding: 10px;
+        padding-right: 20px;
+        border-bottom: 1px solid #c8c7cc;
+        cursor: pointer;
+        position: relative;
+        font-size: 14px;
+        margin: 0;
+        line-height: inherit;
+        }
+
+        .iw-cm-menu li:first-child {
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+        }
+
+        .iw-cm-menu li:last-child {
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom: none;
+        }
+
+        .iw-mOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background: #FFF;
+        opacity: .5;
+        }
+
+        .iw-contextMenu li.iw-mDisable {
+        opacity: 0.3;
+        cursor: default;
+        }
+
+        .iw-mSelected {
+        background-color: #F6F6F6;
+        }
+
+        .iw-cm-arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid #000;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        margin-top: -5px;
+        }
+
+        .iw-mSelected > .iw-cm-arrow-right {
+        }
+
+        /*context menu css end */
+    </style>
+    <style type="text/css">/* This is not a zero-length file! */</style>
+    <style type="text/css">@-webkit-keyframes load4 {
+        0%,
+        100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0
+        0 -1em, -2em -2em 0 0;
+        }
+        12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0
+        -1em, -2em -2em 0 -1em;
+        }
+        25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0
+        -1em, -2em -2em 0 -1em;
+        }
+        37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em
+        0 -1em, -2em -2em 0 -1em;
+        }
+        50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0
+        -1em, -2em -2em 0 -1em;
+        }
+        62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0
+        0, -2em -2em 0 -1em;
+        }
+        75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em
+        0em 0 0.2em, -2em -2em 0 0;
+        }
+        87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0
+        0, -2em -2em 0 0.2em;
+        }
+        }
+
+        @keyframes load4 {
+        0%,
+        100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0
+        0 -1em, -2em -2em 0 0;
+        }
+        12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0
+        -1em, -2em -2em 0 -1em;
+        }
+        25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0
+        -1em, -2em -2em 0 -1em;
+        }
+        37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em
+        0 -1em, -2em -2em 0 -1em;
+        }
+        50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0
+        -1em, -2em -2em 0 -1em;
+        }
+        62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0
+        0, -2em -2em 0 -1em;
+        }
+        75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em
+        0em 0 0.2em, -2em -2em 0 0;
+        }
+        87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0
+        0, -2em -2em 0 0.2em;
+        }
+        }
+    </style>
+</head>
+<body class="home-template" ng-app="myApp0" ng-controller="myController0">
+<header class="site-header">
+    <nav class="navbar navbar-static-top main-navbar" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar"
+                        aria-controls="bs-navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a href="http://www.bootcdn.cn/" class="navbar-brand brand-bootcdn text-hide">ElasticSearch</a>
+            </div>
+            <nav id="bs-navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./advancedSearch.html">advancedSearch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <div class="container jumbotron">
+        <div class="row">
+            <div class="col-xs-12"><h1>ElasticSearch</h1>
+
+                <p>稳定、快速、免费实验性搜索服务<br><span class="package-amount">共收录了 <strong>10余条</strong> 豆瓣书籍数据</span>
+                </p>
+
+                <div class="search-wraper" role="search">
+                    <div class="form-group"><input class="form-control search clearable" placeholder="使用IK分词器开始检索" ng-model="full"/> <a class="btn" ng-click="search()"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="packages-list-container" id="all-packages">
+    <div class="container">
+         <div id="resultlist" class="list-group packages collapse in" id="common-packages" ng-repeat="item in res.hits.hits" ng-show="show">
+            <a class="package list-group-item" target="_blank" >
+            <div class="row">
+                <div class="col-md-2"><h4 class="package-name" ng-bind-html="item._source.title|trustHtml"></h4></div>
+                <div class="col-md-2"><h4 class="package-name"><span><span class="glyphicon glyphicon-star"></span> 检索得分：{{ item._score}}</span><br><span><spam class="glyphicon glyphicon-star-empty"></spam> 豆瓣得分：{{ item._source.doubanscore}}</span></h4></div>
+                <div class="col-md-8 hidden-xs"><p class="package-description" ng-bind-html="item._source.contentIntro|trustHtml" ></p></div>
+                <div class="clearfix"></div>
+                <div class="package-extra-info col-md-2" >{{ item._source.author }}</div>
+                <div class="package-extra-info col-md-2"><span ><span class="glyphicon glyphicon-bookmark"></span> {{ item._source.publisher}}.{{ item._source.year}}出版.共{{ item._source.page}}页.零售价：{{ item._source.price}}.ISBN:{{ item._source.ISBN}}</span></div>
+                <div class="package-extra-info col-md-8"><span ng-bind-html="item._source.authorIntro|trustHtml"></span></div>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</main>
+<footer id="footer" class="footer hidden-print">
+    <div class="container">
+        <div class="row">
+            <div class="footer-about col-md-6 col-sm-12" id="about"><h4>关于 ElasticSearch</h4>
+
+                <p>ElasticSearch 是 <a href="http://www.bootcss.com/" target="_blank"
+                                onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-bootcss.com&#39;])">一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。
+                    仓库。</p>
+
+                <p>自2013年10月31日上线以来已经为30多万家网站提供了稳定、可靠的服务。</p>
+            </div>
+            <div class="footer-links col-md-4 col-sm-12"><h4>战略目标</h4>
+                <ul class="list-unstyled list-inline">
+                    <li>我们建立一个网站或应用程序，并要添加搜索功能，但是想要完成搜索工作的创建是非常困难的。我们希望搜索解决方案要运行速度快，我们希望能有一个零配置和一个完全免费的搜索模式，我们希望能够简单地使用JSON通过HTTP来索引数据，我们希望我们的搜索服务器始终可用。
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-techs col-md-2 col-sm-12"><h4>我们用到的技术</h4>
+                <ul class="list-unstyled list-inline">
+                    <li><a href="http://www.bootcss.com/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-bootcss.com&#39;])">Java</a>
+                    </li>
+                    <li><a href="http://www.ghostchina.com/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-ghostchina.com&#39;])">Lucune</a>
+                    </li>
+                    <li><a href="https://www.jquery123.com/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-jquery123.com&#39;])">Restful</a>
+                    </li>
+                    <li><a href="https://babel.bootcss.com/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-babeljs.cn&#39;])">DSL</a>
+                    </li>
+                    <li><a href="http://lodashjs.com/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-lodashjs.com&#39;])">Head</a>
+                    </li>
+                    <li><a href="https://www.nodeapp.cn/" target="_blank"
+                           onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;footer-nodeapp.cn&#39;])">P2P</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right"><span>© 2013-2018</span> <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a>
+        <span>京公网安备11010802014853</span></div>
+</footer>
+<a href="http://www.bootcdn.cn/#" id="back-to-top" style="display: none;"><i class="fa fa-angle-up"></i></a>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="http://www.bootcdn.cn/assets/js/site.min.js?1526622111831"></script>
+<script src="../js/angular.js"></script>
+<script src="../js/angular-sanitize.js"></script>
+<script>
+     var app0= angular.module('myApp0', ['ngSanitize']);
+     app0.controller('myController0',
+         function ($scope,$http) {
+            $scope.show=false;
+            $scope.search=function() {
+                $http({
+                    method: 'POST',
+                    url: 'http://127.0.0.1:5000/fullSearch/',
+                    data: $scope.full,
+                    headers: {'Content-Type': 'application/json'}
+                }).then(function successCallback(response) {
+                    $scope.show=true;
+                    $scope.res=response.data;
+                }, function errorCallback(response) {
+                    alert('查询失败');
+                });
+            };
+         });
+     app0.filter("trustHtml",function($sce){
+   return function (input){
+       return $sce.trustAsHtml(input);
+   }
+});
+
+
+</script>
+</body>
+</html>

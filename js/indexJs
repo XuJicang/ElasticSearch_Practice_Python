@@ -1,0 +1,71 @@
+var rosterApp = angular.module('rosterApp', ['elasticsearch']);
+rosterApp.factory('rosterService',
+    ['$q', 'esFactory', '$location', function($q, elasticsearch, $location){
+        var client = elasticsearch({
+            host: $location.host() + ":9200"
+        });
+
+        var search = function(term, offset){
+            var deferred = $q.defer();
+            var query = {
+                "match": {
+                    "_all": term
+                }
+            };
+
+            client.search({
+                "index": 'roster',
+                "type": 'employee',
+                "body": {
+                    "size": 10,
+                    "from": (offset || 0) * 10,
+                    "query": query
+                }
+            }).then(function(result) {
+                var ii = 0, hits_in, hits_out = [];
+                hits_in = (result.hits || {}).hits || [];
+                for(;ii < hits_in.length; ii++){
+                    hits_out.push(hits_in[ii]._source);
+                }
+                deferred.resolve(hits_out);
+            }, deferred.reject);
+
+            return deferred.promise;
+        };
+
+        return {
+            "search": search
+        };
+    }]
+);
+rosterApp.controller('rosterCtrl',
+    ['rosterService', '$scope', '$location', function(rosterService, $scope, $location){
+        $scope.employees = [];
+        $scope.page = 0;
+        $scope.allResults = false;
+        $scope.searchTerm = '';
+
+        $scope.search = function(){
+            $scope.page = 0;
+            $scope.employees = [];
+            $scope.allResults = false;
+            $location.search({'q': $scope.searchTerm});
+            $scope.loadMore();
+        };
+
+        $scope.loadMore = function(){
+            rosterService.search($scope.searchTerm, $scope.page++).then(function(results){
+                if(results.length !== 10){
+                    $scope.allResults = true;
+                }
+
+                var ii = 0;
+                for(;ii < results.length; ii++){
+                    $scope.employees.push(results[ii]);
+                }
+            });
+        };
+
+        $scope.loadMore();
+    }]
+);

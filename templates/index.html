@@ -1,0 +1,30 @@
+<div ng-app='rosterApp' ng-controller='rosterCtrl'>
+    <header>
+        <h1>Employee Search</h1>
+    </header>
+    <section class='searchField'>
+        <form ng-submit='search()'>
+            <input ng-model='searchTerm' type='text'>
+            <input type='submit' value='Search for employees'>
+        </form>
+    </section>
+    <section class='results'>
+       <div class='no-employees' ng-hide='employees.length'>No results</div>
+       <article class='employee' ng-cloak ng-repeat='employee in employees'>
+           <h2>
+              <a ng-href='{{employee.link}}'>{{employee.name}}</a>
+           </h2>
+           <ul>
+              <li ng-repeat='historyItem in employee.historyItems'>{{ historyItem }}</li>
+           </ul>
+           <p>
+              {{employee.introduction}}
+              <a ng-href='{{employee.link}}'>More information...</a>
+           </p>
+       </article>
+       <div class='load-more' ng-cloak ng-hide='allResults'>
+            <a ng-click='loadMore()'>More...</a>
+       </div>
+    </section>
+</div>
+<script  type="text/javascript" src="~/js/index.js"></script>
